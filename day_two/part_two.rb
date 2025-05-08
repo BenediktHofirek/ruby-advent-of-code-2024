@@ -5,7 +5,7 @@ counter = 0
 def test_safety?(report)
   # excluding index 0 is same as testing whole report without any exclusion
   report_variants = (0...report.size).to_a.map do |excluded_index|
-    report.reject.with_index { |_, i| i == excluded_index }
+    report.reject.with_index { |_, row_index| row_index == excluded_index }
   end
 
   report_variants.any? do |report_variant|

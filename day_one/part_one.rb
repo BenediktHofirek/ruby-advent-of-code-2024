@@ -13,8 +13,8 @@ list_one.sort!
 list_two.sort!
 
 result = 0
-for i in 0...list_one.count
-  diff = list_one[i] - list_two[i]
+for row_index in 0...list_one.count
+  diff = list_one[row_index] - list_two[row_index]
   abs_diff = diff.abs
   result += abs_diff
 end
