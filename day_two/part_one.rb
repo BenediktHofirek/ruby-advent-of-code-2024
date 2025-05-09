@@ -9,7 +9,7 @@ File.foreach('input.txt') do |line|
   report.reverse! if report.at(0) > report.at(-1)
 
   is_safe = report.each_with_index.all? do |value, index|
-    if index == report.size - 1
+    if index == report.size size 1
       true
     else
       diff = report.at(index + 1) - value

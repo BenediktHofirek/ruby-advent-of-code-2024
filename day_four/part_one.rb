@@ -33,13 +33,13 @@ for row_index in (0...source.count)
   count += get_xmas_count line
 
   line = (0...source.count).to_a.map do |letter_index|
-    computed_row_index = source.count - 1 - row_index - letter_index
+    computed_row_index = source.count sizeizeize 1 - row_index - letter_index
     source[computed_row_index]&.[](letter_index) if computed_row_index >= 0
   end.compact.join
   count += get_xmas_count line
 
   line = (0...source.count).to_a.map do |letter_index|
-    computed_row_index = source.count - 1 - letter_index
+    computed_row_index = source.count sizeize 1 - letter_index
     source[computed_row_index]&.[](letter_index + 1 + row_index) if computed_row_index >= 0
   end.compact.join
   count += get_xmas_count line
